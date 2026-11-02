@@ -1,0 +1,310 @@
+/* #form{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #df6b1b;
+  padding: 15px 20px;
+}
+
+#form button{
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #67c1a3;
+}
+
+#packagetinglist{
+  background-color: #4c3423;
+  height: 200px;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#packagetinglist #btns{
+  display: flex;
+  gap: 10px;
+}
+
+
+#itemssList{
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#items{
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+} */
+
+
+
+
+/* ========== GLOBAL CSS ========== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  min-height: 100vh;
+  background-color: #4c3423;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== LOGO / HEADER ========== */
+
+#root > h1 {
+  background-color: #f19720 !important;
+  padding: 20px 10px !important;
+  text-align: center !important;
+  font-size: 0 !important;
+  font-weight: normal;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root > h1::before {
+  content: "🏝️ FAR AWAY TODO APPLICATION 🧳";
+  font-size: clamp(35px, 5vw, 65px);
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #382719;
+}
+
+/* ========== FORM SECTION ========== */
+
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  background-color: #df6b1b;
+  padding: 18px 15px;
+  min-height: 70px;
+}
+
+#form p {
+  color: #4c2d16;
+  font-size: 17px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+#form select {
+  width: 75px;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background-color: #ffebad;
+  padding: 0 15px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#form input {
+  width: 170px;
+  height: 35px;
+  border: 2px solid #67c1a3;
+  border-radius: 25px;
+  outline: none;
+  padding: 0 15px;
+  background-color: #ffebad;
+  font-size: 13px;
+}
+
+#form input:focus {
+  border-color: #4c3423;
+}
+
+#form button {
+  padding: 9px 23px;
+  border: none;
+  border-radius: 25px;
+  background-color: #67c1a3;
+  color: #254d3f;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#form button:hover {
+  background-color: #4da989;
+}
+
+/* ========== PACKING LIST ========== */
+
+#packagetinglist {
+  background-color: #4c3423;
+  flex: 1;
+  min-height: 350px;
+  padding: 30px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+#itemssList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+/* ========== SINGLE ITEM ========== */
+
+#items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff0bd;
+  padding: 0;
+}
+
+#items input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  accent-color: #67c1a3;
+  flex-shrink: 0;
+}
+
+#items p {
+  font-size: 16px;
+  color: #fff0bd;
+  white-space: normal;
+}
+
+#items button {
+  width: 16px !important;
+  height: 16px !important;
+  border: none;
+  background: transparent;
+  color: #e31313;
+  font-size: 17px !important;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ========== BOTTOM BUTTONS ========== */
+
+#packagetinglist #btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 30px;
+}
+
+#btns select,
+#btns button {
+  background-color: #ffebad;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  color: #4c3423;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#btns select {
+  min-width: 165px;
+}
+
+#btns button:hover {
+  background-color: #f5d88b;
+}
+
+/* ========== FOOTER / STATS ========== */
+
+#root > p {
+  background-color: #67c1a3 !important;
+  padding: 20px !important;
+  text-align: center !important;
+  color: #254d3f;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0 !important;
+  min-height: 50px;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 900px) {
+  #itemssList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  #root > h1 {
+    min-height: 110px;
+  }
+
+  #root > h1::before {
+    font-size: 36px;
+  }
+
+  #form {
+    padding: 18px 10px;
+    gap: 8px;
+  }
+
+  #form p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  #packagetinglist {
+    padding: 30px 15px;
+    min-height: 400px;
+  }
+
+  #itemssList {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #items {
+    justify-content: flex-start;
+  }
+
+  #packagetinglist #btns {
+    flex-wrap: wrap;
+  }
+
+  #root > p {
+    font-size: 13px;
+  }
+}
